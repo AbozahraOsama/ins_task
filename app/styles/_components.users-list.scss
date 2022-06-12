@@ -1,17 +1,14 @@
 .c-users-list {
-  display: table;
   width: 100%;
   margin-bottom: 24px;
   font-size: 14px;
 
   .c-users-list__header {
-    display: table-row;
     font-size: 16px;
     font-weight: 500;
     background-color: #e5e9f1;
 
-    > div {
-      display: table-cell;
+    tr td {
       text-align: center;
       vertical-align: middle;
       font-size: 14px;
@@ -19,11 +16,10 @@
   }
 
   .c-users-list__body {
-    display: table-row;
     height: 64px;
 
-    > div {
-      display: table-cell;
+    tr td {
+      text-align: center;
       padding: 0 8px;
       vertical-align: middle;
     }
