@@ -5,6 +5,7 @@ angular
 function homePageController(Employees) {
   const homePageVm = this;
   homePageVm.employees = [];
+  homePageVm.searchTerm = '';
 
   activate();
 
@@ -14,4 +15,8 @@ function homePageController(Employees) {
         homePageVm.employees = homePageVm.employees.concat(data.employees);
       });
   }
+
+  homePageVm.searchTermHandler = (e) => {
+    homePageVm.searchTerm = e;
+  };
 }

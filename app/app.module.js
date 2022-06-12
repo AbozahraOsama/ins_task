@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import 'ngVue';
 import 'ngVue/build/plugins.js';
+import ngSanitize from 'angular-sanitize';
 import PerformancePageComponent from './pages/performance-page.vue';
 import PerformanceChartComponent from './components/vue-components/performance-chart.vue';
 import HighlightFilterComponent from './components/vue-components/highlight-filter.vue';
@@ -9,6 +10,7 @@ angular.module('appModule', [
   'ui.router',
   'ngVue',
   'ngVue.plugins',
+  ngSanitize,
 ]);
 
 angular.module('appModule').directive('vPerformancePage', (createVueComponent) => {

@@ -6,7 +6,9 @@ angular
     controllerAs: 'EmployeesListComponentVm',
     bindings: {
       employeesList: '<',
+      highlightText: '=',
     },
   });
 
-function EmployeesListComponent() {}
+function EmployeesListComponent() {
+}

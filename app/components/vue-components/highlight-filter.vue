@@ -28,12 +28,12 @@ export default {
       this.highlightText(this.searchTerm);
     },
     highlightText(searchTerm) {
-      this.$emit('search', searchTerm)
+      this.$emit('search-term', searchTerm)
     },
     clearSearch() {
       this.searchTerm = '';
       window.history.replaceState(null, '', '');
-      this.$emit('search', '')
+      this.$emit('search-term', '')
     }
   }
 };

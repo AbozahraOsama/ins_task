@@ -16,14 +16,14 @@
     <td>
       <div class="c-users-list__main-info">
         <img class="c-users-list__avatar" ng-src="{{employee.profile.avatar}}" ng-attr-alt="{{employee.profile.name}}">
-        <div>{{ employee.profile.name }}</div>
+        <div ng-bind-html="employee.profile.name | highlight: EmployeesListComponentVm.highlightText"></div>
       </div>
     </td>
     <td> {{ employee.email }}</td>
-    <td>{{ employee.profile.address }}</td>
+    <td ng-bind-html="employee.profile.address | highlight: EmployeesListComponentVm.highlightText"></td>
     <td> {{ employee.start_date | date }}</td>
     <td> {{ employee.performance_index }}</td>
-    <td>{{ employee.profile.about }}</td>
+    <td ng-bind-html="employee.profile.about | highlight: EmployeesListComponentVm.highlightText"></td>
   </tr>
   </tbody>
 </table>

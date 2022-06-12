@@ -2,11 +2,11 @@
   <div class="c-filters__container">
     <v-highlight-filter ng-controller="homeController"
                         v-props-list="homePageVm.employees"
-                        v-on-search="homePageVm.log"
+                        v-on-search-term="homePageVm.searchTermHandler"
                         watch-depth="value"></v-highlight-filter>
   </div>
 
-  <employees-list employees-list="homePageVm.employees"></employees-list>
+  <employees-list employees-list="homePageVm.employees" highlight-text="homePageVm.searchTerm"></employees-list>
 
   <div class="c-dashboard__footer">
     <button class="c-button">
