@@ -1,14 +1,14 @@
 <template>
   <div class="c-chart__container">
-    <v-chart ref="chart" :option="chartOptions" />
+    <v-chart ref="chart" :option="chartOptions"/>
   </div>
 </template>
 
 <script>
 import moment from "moment";
-import { use } from "echarts/core";
-import { CanvasRenderer } from "echarts/renderers";
-import { LineChart } from "echarts/charts";
+import {use} from "echarts/core";
+import {CanvasRenderer} from "echarts/renderers";
+import {LineChart} from "echarts/charts";
 import {
   TitleComponent,
   TooltipComponent,
@@ -68,6 +68,10 @@ export default {
     };
   },
 
+  mounted() {
+    console.log(this.$store.state);
+  },
+
   computed: {
     initOptions() {
       return {
@@ -111,9 +115,9 @@ export default {
           },
         },
         yAxis: {
-          axisLabel: { show: true },
-          axisTick: { show: true },
-          splitLine: { show: true },
+          axisLabel: {show: true},
+          axisTick: {show: true},
+          splitLine: {show: true},
         },
         series: [
           {
