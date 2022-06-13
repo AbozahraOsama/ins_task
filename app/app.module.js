@@ -3,6 +3,7 @@ import 'ngVue';
 import 'ngVue/build/plugins.js';
 import ngSanitize from 'angular-sanitize';
 import PerformancePageComponent from './pages/performance-page.vue';
+import NotFoundPageComponent from './pages/not-found-page.vue';
 import PerformanceChartComponent from './components/vue-components/performance-chart.vue';
 import HighlightFilterComponent from './components/vue-components/highlight-filter.vue';
 
@@ -31,4 +32,8 @@ angular.module('appModule').directive('vPerformanceChart', (createVueComponent) 
 
 angular.module('appModule').directive('vHighlightFilter', (createVueComponent) => {
   return createVueComponent(Vue.component('HighlightFilterComponent', HighlightFilterComponent));
+});
+
+angular.module('appModule').directive('vNotFoundPage', (createVueComponent) => {
+  return createVueComponent(Vue.component('NotFoundPageComponent', NotFoundPageComponent));
 });
