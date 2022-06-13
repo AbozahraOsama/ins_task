@@ -71,3 +71,18 @@
     margin: 0 10px;
   }
 }
+
+.c-chart__tooltip {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .c-chart__tooltip-dot {
+    display: inline-block;
+    margin-right: 4px;
+    border-radius: 10px;
+    width: 10px;
+    height: 10px;
+  }
+}
