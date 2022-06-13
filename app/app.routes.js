@@ -4,7 +4,8 @@ angular.module('appModule')
       enabled: true,
     });
   })
-  .config(($stateProvider) => {
+  .config(($stateProvider, $urlRouterProvider) => {
+    $urlRouterProvider.otherwise('/not-found');
     $stateProvider
       .state({
         name: 'app',
@@ -17,5 +18,10 @@ angular.module('appModule')
         name: 'team-performance',
         url: '/team-performance',
         template: '<v-performance-page></v-performance-page>',
+      })
+      .state({
+        name: 'not-found',
+        url: '/not-found',
+        template: '<v-not-found-page></v-not-found-page>',
       });
   });

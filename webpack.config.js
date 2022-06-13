@@ -18,13 +18,16 @@ module.exports = {
     new ESLintPlugin({
       failOnError: true,
       emitWarning: false,
-      outputReport: true
+      outputReport: true,
     }),
     new VueLoaderPlugin(),
   ],
   devServer: {
     static: './dist',
     hot: true,
+    historyApiFallback: {
+      index: '/index.html',                  // <----- THIS WORKS
+    },
   },
   output: {
     filename: '[name].bundle.js',
@@ -35,7 +38,7 @@ module.exports = {
     rules: [
       {
         test: /\.vue$/,
-        loader: 'vue-loader'
+        loader: 'vue-loader',
       },
       {
         test: /\.(html)$/,
