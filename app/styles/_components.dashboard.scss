@@ -42,12 +42,19 @@
 }
 
 .c-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 40px;
   background-color: #0099ff;
   color: white;
   min-width: 120px;
   padding: 0 16px;
   border-radius: 4px;
+
+  &:disabled {
+    opacity: .5;
+  }
 }
 
 .c-filter__container {
@@ -87,7 +94,7 @@
   }
 }
 
-.c-not-found__container{
+.c-not-found__container {
   display: grid;
   place-content: center;
 }

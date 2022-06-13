@@ -58,12 +58,11 @@ export default {
           confine: false,
           hideDelay: 0,
           padding: 10,
-          backgroundColor:'#16253f',
-          textStyle:{
-            color:'#ffffff'
+          backgroundColor: '#16253f',
+          textStyle: {
+            color: '#ffffff',
           },
           formatter: function (params) {
-            console.log(params);
             return (
               `<div class="c-chart__tooltip">
               <strong>${params[0].axisValue}</strong>

@@ -9,8 +9,10 @@
   <employees-list employees-list="homePageVm.employees" highlight-text="homePageVm.searchTerm"></employees-list>
 
   <div class="c-dashboard__footer">
-    <button class="c-button">
+    <button ng-if="!homePageVm.noMorePages" ng-disabled="homePageVm.loading" class="c-button"
+            ng-click="homePageVm.loadMore()">
       Load More
+      <span ng-if="homePageVm.loading" class="loader"></span>
     </button>
   </div>
 </div>
