@@ -1,7 +1,7 @@
 <template>
   <div class="c-dashboard">
     <div class="c-filters__container">
-      [Place filter component here]
+      <date-range-filter />
     </div>
     <div class="c-dashboard__header">
       <performance-chart-component />
@@ -10,11 +10,14 @@
 </template>
 
 <script>
-import PerformanceChartComponent from "../components/vue-components/performance-chart.vue";
+import PerformanceChartComponent from '../components/vue-components/performance-chart.vue';
+import DateRangeFilter from '../components/vue-components/date-range-filter.vue';
+
 export default {
-  name: "AboutPageComponent",
+  name: 'AboutPageComponent',
   components: {
     PerformanceChartComponent,
+    DateRangeFilter,
   },
 };
 </script>

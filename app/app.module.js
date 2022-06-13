@@ -6,12 +6,20 @@ import PerformancePageComponent from './pages/performance-page.vue';
 import PerformanceChartComponent from './components/vue-components/performance-chart.vue';
 import HighlightFilterComponent from './components/vue-components/highlight-filter.vue';
 
+import store from './store/index';
+
 angular.module('appModule', [
   'ui.router',
   'ngVue',
   'ngVue.plugins',
   ngSanitize,
 ]);
+
+angular.module('appModule').config(($ngVueProvider) => {
+  $ngVueProvider.setRootVueInstanceProps({
+    store,
+  });
+});
 
 angular.module('appModule').directive('vPerformancePage', (createVueComponent) => {
   return createVueComponent(Vue.component('performancePageComponent', PerformancePageComponent));

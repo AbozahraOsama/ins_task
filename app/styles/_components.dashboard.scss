@@ -61,3 +61,13 @@
     height: 30px;
   }
 }
+
+.c-date-filter__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .c-date-filter__input {
+    margin: 0 10px;
+  }
+}
