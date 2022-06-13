@@ -57,7 +57,20 @@ export default {
           transitionDuration: 0,
           confine: false,
           hideDelay: 0,
-          padding: 0,
+          padding: 10,
+          backgroundColor:'#16253f',
+          textStyle:{
+            color:'#ffffff'
+          },
+          formatter: function (params) {
+            console.log(params);
+            return (
+              `<div class="c-chart__tooltip">
+              <strong>${params[0].axisValue}</strong>
+               <div>${params[0].marker}Team Performance Index ${params[0].value}%</div>
+                </div>`
+            );
+          },
         },
         grid: {
           left: '30px',
@@ -97,6 +110,29 @@ export default {
             },
           },
         ],
+        visualMap: {
+          show: true,
+          right: 0,
+          top: 45,
+          bottom: 0,
+          pieces: [
+            {
+              min: 0,
+              max: 50,
+              color: '#f4674c',
+            },
+            {
+              min: 50,
+              max: 80,
+              color: '#fbdb10',
+            },
+            {
+              min: 80,
+              max: 100,
+              color: '#01984f',
+            },
+          ],
+        },
       };
     },
 
